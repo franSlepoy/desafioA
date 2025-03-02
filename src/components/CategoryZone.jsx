@@ -14,15 +14,30 @@ const CategoryZone = ({ category, onDrop }) => {
     <Paper
       ref={drop}
       sx={{
-        padding: "20px",
-        height: "500px",
+        padding: "1px",
+        height: "150px",
         width: "100%",
-        backgroundColor: isOver ? "#cce5ff" : "#f5f5f5",
+        backgroundImage: isOver
+          ? "linear-gradient(135deg, #2ecc71 0%, #27ae60 100%)"
+          : "linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
         textAlign: "center",
-        fontSize: "1.2rem",
+        borderRadius: "20px",
+        boxShadow: "5px 5px 10px rgba(0,0,0,0.2)",
+        transition: "transform 0.2s ease",
+        "&:hover": { transform: "scale(1.05)" },
       }}
     >
-      <Typography variant="h6">{category.name}</Typography>
+      <Typography
+        sx={{
+          fontFamily: "poppins",
+          fontSize: "20px",
+          p: "10%",
+          fontWeight: 600,
+          textShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)",
+        }}
+      >
+        {category.name}
+      </Typography>
     </Paper>
   );
 };

@@ -6,7 +6,7 @@ export const terms = [
     { id: 5, text: "Primitivos (Números, Cadenas, Booleanos)", category: "datos" },
     { id: 6, text: "Complejos (Arrays, Objetos)", category: "datos" },
     { id: 7, text: "Pruebas Unitarias", category: "errores" },
-    { id: 8, text: "Programación Orientada a Objetos (POO)", category: "paradigmas" },
+    { id: 8, text: "Programación Orientada a Objetos", category: "paradigmas" },
     { id: 9, text: "Programación Funcional", category: "paradigmas" },
     { id: 10, text: "Programación Imperativa", category: "paradigmas" },
   ];
