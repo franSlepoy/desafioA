@@ -14,6 +14,11 @@ import CardItem from "./CardItem";
 import CategoryZone from "./CategoryZone";
 import { categories } from "../data/categories";
 import { terms as initialTerms } from "../data/terms";
+import confetti from "canvas-confetti";
+
+const correctSound = new Audio("/sounds/correct.mp3");
+const wrongSound = new Audio("/sounds/wrong.mp3");
+const applauseSound = new Audio("/sounds/applause.mp3");
 
 const GameBoard = () => {
   const [terms, setTerms] = useState(initialTerms);
@@ -28,11 +33,30 @@ const GameBoard = () => {
 
   const handleDrop = (item, targetCategory) => {
     if (item.category === targetCategory) {
+      correctSound.play();
       setTerms((prev) => prev.filter((term) => term.id !== item.id));
-      setScore((prev) => Math.min(10, prev + 1));
+      setScore((prev) => {
+        const newScore = Math.min(10, prev + 1);
+        if (newScore === 10) {
+          triggerCelebration(); // 🎉 Activar confeti y aplausos
+        }
+        return newScore;
+      });
     } else {
+      wrongSound.play();
       setScore((prev) => Math.max(0, prev - 1));
     }
+  };
+
+  const triggerCelebration = () => {
+    applauseSound.play(); // 🔊 Reproducir aplausos
+
+    confetti({
+      particleCount: 250,
+      spread: 220,
+      origin: { y: 0.6 }, 
+      ticks: 200,
+    });
   };
 
   const resetGame = () => {
@@ -101,7 +125,7 @@ const GameBoard = () => {
             <Typography mt={1} fontFamily={"poppins"} variant="body2">
               ⭐ Si al finalizar el juego obtienes una estrella{" "}
               <strong>dorada (10)</strong>, estás completamente listo para el
-              próximo nivel! 🚀
+              próximo nivel y obtendras aplausos y confeti! 🚀
             </Typography>
             <Typography mt={1} fontFamily={"poppins"} variant="body2">
               🥈 Si obtienes una estrella <strong>plateada (mayor a 6)</strong>,
