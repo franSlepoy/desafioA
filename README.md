@@ -1,12 +1,23 @@
-# React + Vite
+# 🎮 Clasificación de Conceptos Gamificada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un **juego educativo interactivo** en el que los usuarios deben **arrastrar y soltar tarjetas** en las categorías correctas. Desarrollado en **ReactJS con Material UI y react-dnd**, el juego tiene efectos visuales, sonidos y confeti cuando el usuario gana.
 
-Currently, two official plugins are available:
+## 🚀 Características:
+- Drag & Drop con react-dnd.
+- Sonidos de acierto/error y efecto de confeti al ganar.
+- Interfaz moderna con Material UI y tipografía "Poppins".
+- Puntaje dinámico con estrellas doradas, plateadas o rojas según el desempeño.
+- Modal de bienvenida con instrucciones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Tecnologías utilizadas:
+- React.js con Vite
+- Material UI
+- React DnD
+- Canvas Confetti
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Instalación:
+```sh
+https://github.com/franSlepoy/desafioA.git
+cd desafioA.git
+npm install
+npm run dev
