@@ -31,8 +31,8 @@ const GameBoard = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDrop = (item, targetCategory) => {
-    if (item.category === targetCategory) {
+  const handleDrop = (item, categoryId) => {
+    if (item.category === categoryId) {
       correctSound.play();
       setTerms((prev) => prev.filter((term) => term.id !== item.id));
       setScore((prev) => {
