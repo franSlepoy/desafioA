@@ -38,7 +38,7 @@ const GameBoard = () => {
       setScore((prev) => {
         const newScore = Math.min(10, prev + 1);
         if (newScore === 10) {
-          triggerCelebration(); // 🎉 Activar confeti y aplausos
+          triggerCelebration(); 
         }
         return newScore;
       });
@@ -49,7 +49,7 @@ const GameBoard = () => {
   };
 
   const triggerCelebration = () => {
-    applauseSound.play(); // 🔊 Reproducir aplausos
+    applauseSound.play(); 
 
     confetti({
       particleCount: 250,
