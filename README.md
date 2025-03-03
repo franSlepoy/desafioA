@@ -2,6 +2,8 @@
 
 Este es un **juego educativo interactivo** en el que los usuarios deben **arrastrar y soltar tarjetas** en las categorías correctas. Desarrollado en **ReactJS con Material UI y react-dnd**, el juego tiene efectos visuales, sonidos y confeti cuando el usuario gana.
 
+URL: https://desafioa.sinestesia-lab.com/
+
 ## 🚀 Características:
 - Drag & Drop con react-dnd para arrastrar tarjetas.
 - Sonidos de acierto/error y efecto de confeti al ganar.
