@@ -19,7 +19,7 @@ URL: https://desafioa.sinestesia-lab.com/
 
 ## 🛠 Instalación:
 ```sh
-https://github.com/franSlepoy/desafioA.git
-cd desafioA.git
+git clone https://github.com/franSlepoy/desafioA.git
+cd desafioA
 npm install
 npm run dev
